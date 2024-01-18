@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <title>Color Blocks</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
-  <title>Color Blocks</title>
-</head>
-
-<body>
-  <!-- This <header> is for Part Two of the assignment! -->
-  <!-- <header id="block-counts">
+  <body>
+    <!-- This <header> is for Part Two of the assignment! -->
+    <!-- <header id="block-counts">
     <p>Red Count: <span id="red-count">1</span></p>
     <p>Blue Count: <span id="blue-count">1</span></p>
     <p>Green Count: <span id="green-count">1</span></p>
     <p>Yellow Count: <span id="yellow-count">1</span></p>
   </header> -->
-  <main>
-    <section id="buttons">
-      <button id="red-btn">Red</button>
-      <button id="blue-btn">Blue</button>
-      <button id="green-btn">Green</button>
-      <button id="yellow-btn">Yellow</button>
-    </section>
-    <section id="blocks">
-      <div class="block red-fill"></div>
-      <div class="block blue-fill"></div>
-      <div class="block green-fill"></div>
-      <div class="block yellow-fill"></div>
-    </section>
-  </main>
-</body>
+    <main>
+      <section id="counts">
+        <div>
+          <span>Red: </span>
+          <span id="red-c">1</span>
+        </div>
+        <div>
+          <span>Blue: </span>
+          <span id="blue-c">1</span>
+        </div>
+        <div>
+          <span>Green: </span>
+          <span id="green-c">1</span>
+        </div>
+        <div>
+          <span>Yellow: </span>
+          <span id="yellow-c">1</span>
+        </div>
+      </section>
+      <section id="buttons">
+        <button id="red-btn" onclick="addBlock('red')">Red</button>
+        <button id="blue-btn" onclick="addBlock('blue')">Blue</button>
+        <button id="green-btn" onclick="addBlock('green')">Green</button>
+        <button id="yellow-btn" onclick="addBlock('yellow')">Yellow</button>
+      </section>
+      <section id="blocks">
+        <div class="block red-fill" onclick="deleteSelf(event, 'red')"></div>
+        <div class="block blue-fill" onclick="deleteSelf(event, 'blue')"></div>
+        <div
+          class="block green-fill"
+          onclick="deleteSelf(event, 'green')"
+        ></div>
+        <div
+          class="block yellow-fill"
+          onclick="deleteSelf(event, 'yellow')"
+        ></div>
+      </section>
+    </main>
+  </body>
 </html>
